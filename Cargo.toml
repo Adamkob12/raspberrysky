@@ -1,0 +1,10 @@
+[package]
+name = "raspberrysky"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aarch64-cpu = { path = "lib/aarch64-cpu" }
+
+[workspace]
+members = ["lib/aarch64-cpu"]
