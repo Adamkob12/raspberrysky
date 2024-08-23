@@ -1,7 +1,9 @@
 #![no_std]
 #![no_main]
+#![feature(asm_const)]
 
 pub mod entry;
+pub mod mem;
 pub mod param;
 pub mod start;
 use aarch64_cpu::*;

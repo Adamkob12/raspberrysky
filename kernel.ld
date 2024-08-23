@@ -4,12 +4,12 @@ SECTIONS
 {
     .text :  {
         *(.entry)
-        *(.text)
+        *(.text .text.*)
     }
-    .rodata : { *(.rodata) }
-    .data : { *(.data) }
+    .rodata : { *(.rodata .rodata.*) }
+    .data : { *(.data .data.*) }
     . = ALIGN(0x8);
-    bss_begin = .;
+    _bss_begin = .;
     .bss : { *(.bss*) }
-    bss_end = .;
+    _bss_end = .;
 }
